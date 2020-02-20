@@ -1,4 +1,4 @@
-<head>
+<head hexo-theme='Material X' version='<%- theme.info.version %>' docs='https://xaoxuu.com/wiki/material-x/'>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <%
@@ -59,7 +59,7 @@
   <link rel="shortcut icon" type='image/x-icon' href="<%- url_for(config.favicon) %>">
   <% } %>
 
-  <% if (theme.aplayer == true) { %>
+  <% if (theme.aplayer.enable) { %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
   <% } %>
 
