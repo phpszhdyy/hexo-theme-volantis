@@ -1,6 +1,6 @@
-<header class="l_header<%- page.sidebar == false ? ' no_sidebar' : '' %> <%= theme.style %> <%- theme.blur.nav ? 'nav-blur' : '' %>">
+<header class="l_header<%- page.sidebar == false ? ' no_sidebar' : '' %> <%- theme.style.blur && theme.style.blur.navbar ? 'nav-blur' : '' %>">
   <div id="loading-bar-wrapper">
-    <div id="loading-bar" class="<%= theme.style %>"></div>
+    <div id="loading-bar"></div>
   </div>
 
 	<div class='wrapper'>
@@ -40,8 +40,8 @@
 
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="<%- __('search.placeholder') %>" />
           <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="<%- theme.navbar && theme.navbar.search %>" />
         </form>
       </div>
 
@@ -64,7 +64,7 @@
 		</div>
 	</div>
 </header>
-	<aside class="menu-phone">
+	<aside class="menu-phone white-box <%- theme.style.shadow.card ? 'card-shadow' : '' %> <%- theme.style.blur && theme.style.blur.widget ? 'widget-blur' : '' %>">
     <header>
 		<nav class="menu navgation">
       <ul>
