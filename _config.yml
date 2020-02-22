@@ -154,11 +154,7 @@ layout:
   # 文章列表（主页、自定义的列表）布局
   on_list:
     # 列表中每一篇文章的meta信息
-<<<<<<< HEAD
     meta: [title, author, category, date, wordcount, top]
-=======
-    meta: [title, author, date, category, tags, wordcount, top]
->>>>>>> master
     # 列表类页面的侧边栏
     sidebar: [blogger, dao_hang, category, tagcloud]
   # 文章页面布局
@@ -367,13 +363,8 @@ widget:
         target: _self
       - name: 主题文档
         icon: fas fa-book
-<<<<<<< HEAD
-        url: https://xaoxuu.com/wiki/material-x/
-        rel: nofollow noopener noreferrer
-=======
         url: https://xaoxuu.com/wiki/volantis/
         rel: external nofollow noopener noreferrer
->>>>>>> master
         target: _blank
       - name: 关于小站
         icon: fas fa-info-circle
