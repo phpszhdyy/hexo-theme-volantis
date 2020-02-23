@@ -373,8 +373,9 @@ widget:
         target: _self
   - id: wiki-ios
     class: list
-    icon: fab fa-apple
+    icon: fas fa-arrow-left
     title: CocoaPods
+    backurl: /wiki/
     rows:
       - name: ProHUD
         url: /wiki/prohud/
