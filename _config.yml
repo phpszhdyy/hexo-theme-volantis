@@ -267,7 +267,7 @@ widget:
   - id: toc
     class: toc
     icon: fas fa-list
-    title: 本文目录
+    title: TOC
     list_number: false # 是否显示章节
     min_depth: 2 # H1建议用作网页或者文章的标题，章节从H2开始。
     max_depth: 5 # 由于宽度有限，主题没有针对所有层级进行布局优化，建议文章最多分为：H2/H3/H4/H5四个层级
@@ -371,33 +371,43 @@ widget:
         url: about/
         rel: nofollow noopener noreferrer
         target: _self
-  - id: tui_jian
+  - id: wiki-ios
     class: list
-    icon: fas fa-thumbs-up
-    title: 强烈推荐
+    icon: fab fa-apple
+    title: CocoaPods
     rows:
-      - name: 带图片的列表
-        img: https://img.vim-cn.com/4e/3c87a2fd28fd0b9c2f27ce3f83f1e9275d0488.png
-      - name: 带图标的列表
-        icon: fas fa-home
-      - name: Hexo脚本（Mac）
-        url: https://xaoxuu.com/wiki/hexo.sh/
+      - name: ProHUD
+        url: /wiki/prohud/
+      - name: Inspire
+        url: /wiki/inspire/
+      - name: AXKit
+        url: /wiki/axkit/
+      - name: ValueX
+        url: /wiki/valuex/
+  - id: wiki-sh
+    class: list
+    icon: fas fa-file-code
+    title: Shell Script
+    rows:
+      - name: hexo.sh
+        url: /wiki/hexo.sh/
+      - name: podspec.sh
+        url: /wiki/podspec.sh/
+      - name: vim-cn.sh
+        url: /wiki/vim-cn.sh/
+  - id: contact
+    class: list
+    icon: fas fa-info-circle
+    title: Contact Info
+    rows:
+      - name: github@xaoxuu
+        icon: fab fa-github
+        url: https://github.com/xaoxuu/
         rel: external nofollow noopener noreferrer
         target: _blank
-      - name: 图床脚本（Mac）
-        url: https://xaoxuu.com/wiki/vim-cn.sh/
-        rel: external nofollow noopener noreferrer
-        target: _blank
-      - name: 图片在线压缩
-        url: https://yasuotu.com
-        rel: external nofollow noopener noreferrer
-        target: _blank
-      - name: 生成Favicon
-        url: https://realfavicongenerator.net
-        rel: external nofollow noopener noreferrer
-        target: _blank
-      - name: 简历主题
-        url: https://mxclub.github.io/resume/
+      - name: me@xaoxuu.com
+        icon: fas fa-envelope
+        url: mailto:me@xaoxuu.com
         rel: external nofollow noopener noreferrer
         target: _blank
 
