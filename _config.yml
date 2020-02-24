@@ -42,7 +42,7 @@ service:
   #   css: '//cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css'
   #   js: '//cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js'
   # 文本框打字机特效
-  comment_typing: '//cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.33/js/comment_typing.js'
+  # comment_typing: '//cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.33/js/comment_typing.js'
 
 
 
@@ -65,7 +65,7 @@ style:
 #   无背景图：关闭毛玻璃，开启卡片阴影
 
 # 显示「阅读全文」按钮
-readmore: true
+readmore: #true
 
 # 幻灯片背景
 backstretch:
