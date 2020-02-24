@@ -296,7 +296,7 @@ widget:
   - id: blogger
     class: blogger
     display: [desktop] # [desktop, mobile]
-    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
+    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png
     # title:  标题
     # subtitle: 副标题
     # jinrishici: true # 今日诗词。可以设置字符串，加载失败时会显示占位字符串。
