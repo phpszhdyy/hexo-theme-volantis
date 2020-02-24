@@ -5,7 +5,7 @@ info:
   docs: https://xaoxuu.com/wiki/volantis/
   cdn: # 要使用CDN，请在根目录的config文件中写上 use_cdn: true
     css:
-      style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.30/css/style.css
+      # style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.30/css/style.css
     js:
       app: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.30/js/app.js
       search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.30/js/search.js
@@ -51,6 +51,9 @@ backstretch:
   is_dark: # true       # 图片是否是暗色的（调整文字为白色）
   images:
     - https://i.loli.net/2020/02/08/HNuVoted2mUxILl.jpg
+    # - https://i.loli.net/2020/02/08/dNJyR4LHtarTqPu.jpg
+    # - https://i.loli.net/2020/02/08/yXx4GwgZYdi81Qs.jpg
+    # - https://i.loli.net/2020/02/08/RP7JpGvWaCYfuB6.jpg
 
 
 ############################### 自定义 ###############################
@@ -157,7 +160,7 @@ layout:
     # 列表中每一篇文章的meta信息
     meta: [title, author, category, date, wordcount, top]
     # 列表类页面的侧边栏
-    sidebar: [blogger, dao_hang, category, tagcloud]
+    sidebar: [blogger, navigation, category, tagcloud]
   # 文章页面布局
   on_page:
     # 文章页面主体元素，你也可以在页面的Front-matter中设置
@@ -258,6 +261,7 @@ widget:
   # 博主信息小部件配置
   - id: blogger
     class: blogger
+    display: [desktop] # [desktop, mobile]
     avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
     # title:  标题
     # subtitle: 副标题
@@ -267,8 +271,10 @@ widget:
   # 目录小部件配置(仅在文章中有效)
   - id: toc
     class: toc
-    icon: fas fa-list
-    title: TOC
+    display: [desktop] # [desktop, mobile]
+    header:
+      icon: fas fa-list
+      title: TOC
     list_number: false # 是否显示章节
     min_depth: 2 # H1建议用作网页或者文章的标题，章节从H2开始。
     max_depth: 5 # 由于宽度有限，主题没有针对所有层级进行布局优化，建议文章最多分为：H2/H3/H4/H5四个层级
@@ -276,24 +282,20 @@ widget:
   # 文章分类小部件配置
   - id: category
     class: category
-    icon: fas fa-folder-open
-    title: 文章分类
-    more: # 右上角的按钮
-      icon: fas fa-expand-arrows-alt
+    display: [desktop] # [desktop, mobile]
+    header:
+      icon: fas fa-folder-open
+      title: 文章分类
       url: blog/categories/
-      rel: external nofollow noopener noreferrer
-      target: _self
   # ---------------------------------------
   # 标签云小部件配置
   - id: tagcloud
     class: tagcloud
-    icon: fas fa-tags
-    title: 热门标签
-    more: # 右上角的按钮
-      icon: fas fa-expand-arrows-alt
+    display: [desktop] # [desktop, mobile]
+    header:
+      icon: fas fa-tags
+      title: 热门标签
       url: blog/tags/
-      rel: external nofollow noopener noreferrer
-      target: _self
     min_font: 14
     max_font: 24
     color: true
@@ -303,12 +305,15 @@ widget:
   # 相关文章小部件配置
   - id: related_posts
     class: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
-    icon: fas fa-bookmark
-    title: 相关文章
+    display: [desktop, mobile] # [desktop, mobile]
+    header:
+      icon: fas fa-bookmark
+      title: 相关文章
   # ---------------------------------------
   # 版权说明小部件（仅用于文章中）
   - id: copyright
     class: copyright
+    display: [desktop, mobile] # [desktop, mobile]
     blockquote: true # 是否把内容放到blockquote中
     permalink: '本文永久链接是：' # 显示文章永久链接
     content:
@@ -316,32 +321,27 @@ widget:
       - ''
       - permalink
   # ---------------------------------------
-  # 捐赠小部件（可用于文章中和侧边栏）
-  - id: donate
-    class: donate
-    icon: fas fa-donate
-    title: 打赏
-    height: 64px
-    # fancybox: true # 是否允许点击放大
+  # 二维码小部件（可用于文章中的打赏，只显示图片，无其他功能）
+  - id: qrcode
+    class: qrcode
+    display: [desktop] # [desktop, mobile]
+    header:
+      icon: fas fa-mobile
+      title: 手机观看
+    height: #64px  # 不设置则自动高度
+    fancybox: #true # 是否允许点击放大
     images:
-      - https://img.vim-cn.com/4e/3c87a2fd28fd0b9c2f27ce3f83f1e9275d0488.png
-      - https://img.vim-cn.com/4e/3c87a2fd28fd0b9c2f27ce3f83f1e9275d0488.png
-      - https://img.vim-cn.com/4e/3c87a2fd28fd0b9c2f27ce3f83f1e9275d0488.png
-      - https://img.vim-cn.com/4e/3c87a2fd28fd0b9c2f27ce3f83f1e9275d0488.png
+      - https://img.vim-cn.com/a1/093847694418628874eaf837b6d01b0006bc2f.png
+  # ---------------------------------------
+  # ---------------------------------------
   # ---------------------------------------
   # 自定义组件，仿照如下写法
-  - id: huan_ying # 唯一标识，自己命名，建议全英文
-    class: text # 小部件类型，对应_widget文件夹中的文件名
-    icon: fas fa-file
-    title: 文本部件
-    content:
-      - '这是一段支持markdown的文本'
-      - '![](https://img.vim-cn.com/4e/3c87a2fd28fd0b9c2f27ce3f83f1e9275d0488.png)'
-      - haha
-  - id: dao_hang
+  - id: navigation
     class: grid
-    icon: fas fa-map-signs
-    title: 站内导航
+    display: [desktop] # [desktop, mobile]
+    header:
+      icon: fas fa-map-signs
+      title: 站内导航
     rows:
       - name: 近期文章
         icon: fas fa-clock
@@ -374,9 +374,11 @@ widget:
         target: _self
   - id: wiki-ios
     class: list
-    icon: fas fa-chevron-left
-    title: CocoaPods
-    backurl: /wiki/
+    display: [desktop, mobile] # [desktop, mobile]
+    header:
+      icon: fas fa-chevron-left
+      title: CocoaPods
+      url: /wiki/
     rows:
       - name: ProHUD
         url: /wiki/prohud/
@@ -388,9 +390,11 @@ widget:
         url: /wiki/valuex/
   - id: wiki-sh
     class: list
-    icon: fas fa-chevron-left
-    title: Shell Script
-    backurl: /wiki/
+    display: [desktop, mobile] # [desktop, mobile]
+    header:
+      icon: fas fa-chevron-left
+      title: Shell Script
+      url: /wiki/
     rows:
       - name: hexo.sh
         url: /wiki/hexo.sh/
@@ -398,10 +402,12 @@ widget:
         url: /wiki/podspec.sh/
       - name: vim-cn.sh
         url: /wiki/vim-cn.sh/
-  - id: contact
+  - id: contacts
     class: list
-    icon: fas fa-info-circle
-    title: Contact Info
+    display: [desktop] # [desktop, mobile]
+    header:
+      icon: fas fa-info-circle
+      title: Contact Info
     rows:
       - name: github@xaoxuu
         icon: fab fa-github
