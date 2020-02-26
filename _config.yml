@@ -5,7 +5,7 @@ info:
   docs: https://xaoxuu.com/wiki/volantis/
   cdn: # 要使用CDN，请在根目录的config文件中写上 use_cdn: true
     css:
-      style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.38/css/style.css
+      # style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.38/css/style.css
     js:
       app: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.38/js/app.js
       search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.38/js/search.js
@@ -415,14 +415,14 @@ widget:
       title: CocoaPods
       url: /wiki/
     rows:
-      - name: ProHUD
+      - name: ProHUD (Swift)
         url: /wiki/prohud/
-      - name: Inspire
-        url: /wiki/inspire/
-      - name: AXKit
-        url: /wiki/axkit/
-      - name: ValueX
+      - name: ValueX (ObjC)
         url: /wiki/valuex/
+      - name: Inspire (Swift)
+        url: /wiki/inspire/
+      - name: AXKit (ObjC)
+        url: /wiki/axkit/
   - id: wiki-sh
     class: list
     display: [desktop, mobile] # [desktop, mobile]
