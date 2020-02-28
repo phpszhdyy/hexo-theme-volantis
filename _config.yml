@@ -5,7 +5,7 @@ info:
   docs: https://xaoxuu.com/wiki/volantis/
   cdn: # 要使用CDN，请在根目录的config文件中写上 use_cdn: true
     css:
-      style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.39/css/style.css
+      # style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.39/css/style.css
     js:
       app: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.39/js/app.js
       search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@20.2.39/js/search.js
@@ -217,9 +217,11 @@ layout:
 meta:
   # 文章标题
   title: # 暂无配置
-  # 文章作者
+  # 默认文章作者（可在front-matter中覆盖）
   author:
-    icon: fas fa-user # 如果配置了头像，则不会显示图标
+    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png
+    name: Mr. Xu
+    url: https://xaoxuu.com
   # 文章创建日期
   date:
     icon: fas fa-edit
