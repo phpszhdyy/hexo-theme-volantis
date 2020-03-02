@@ -247,7 +247,7 @@ meta:
     icon_duration: fas fa-hourglass-half
   # 文章标签
   tags:
-    icon: fas fa-tag
+    icon: fas fa-hashtag
   # 分享
   share:
     - id: qq
@@ -444,23 +444,6 @@ widget:
         url: /wiki/podspec.sh/
       - name: vim-cn.sh
         url: /wiki/vim-cn.sh/
-  contacts:
-    class: list
-    display: [desktop] # [desktop, mobile]
-    header:
-      icon: fas fa-info-circle
-      title: Contact Info
-    rows:
-      - name: github@xaoxuu
-        icon: fab fa-github
-        url: https://github.com/xaoxuu/
-        rel: external nofollow noopener noreferrer
-        target: _blank
-      - name: me@xaoxuu.com
-        icon: fas fa-envelope
-        url: mailto:me@xaoxuu.com
-        rel: external nofollow noopener noreferrer
-        target: _blank
 
 
 # 网站页脚
