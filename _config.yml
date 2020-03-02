@@ -413,7 +413,7 @@ widget:
         url: about/
         rel: nofollow noopener noreferrer
         target: _self
-  - id: wiki-ios
+  wiki-ios:
     class: list
     display: [desktop, mobile] # [desktop, mobile]
     header:
@@ -429,7 +429,7 @@ widget:
         url: /wiki/inspire/
       - name: AXKit (ObjC)
         url: /wiki/axkit/
-  - id: wiki-sh
+  wiki-sh:
     class: list
     display: [desktop, mobile] # [desktop, mobile]
     header:
@@ -443,7 +443,7 @@ widget:
         url: /wiki/podspec.sh/
       - name: vim-cn.sh
         url: /wiki/vim-cn.sh/
-  - id: contacts
+  contacts:
     class: list
     display: [desktop] # [desktop, mobile]
     header:
