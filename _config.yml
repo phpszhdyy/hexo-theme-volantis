@@ -207,7 +207,7 @@ layout:
       header: [title, author, category, date, top]
       footer: [updated, tags, btns, share]
     # 文章页脚，自动在每一篇文章末尾添加
-    footer: [copyright]
+    footer: [related_posts, copyright]
     # 文章页面的侧边栏
     sidebar: [toc]
   # 其他的页面布局暂时等于文章列表
