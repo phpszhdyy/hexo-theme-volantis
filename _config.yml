@@ -1,15 +1,15 @@
 ############################### 主题基本信息 ###############################
 info:
   name: Volantis
-  version: 1.7.2
+  version: 1.7.3
   docs: https://volantis.js.org/
   cdn: # 要使用CDN，请在根目录的config文件中写上 use_cdn: true
     css:
-      style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.2/css/style.css
+      style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.3/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.2/js/app.js
-      search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.2/js/search.js
-      valine: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.2/js/valine.js
+      app: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.3/js/app.js
+      search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.3/js/search.js
+      valine: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.3/js/valine.js
 
 
 
@@ -21,7 +21,7 @@ plugins:
   jquery: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
   ################################################## 提升速度类的服务
   # 鼠标放在链接上就提前开始加载了 [站内的url一定要以‘/’结尾]
-  instant_page: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.2/js/instant_page.js
+  instant_page: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.3/js/instant_page.js
   ################################################## 优化体验类的服务
   # 图片放大预览
   fancybox:
@@ -42,7 +42,7 @@ plugins:
     css: https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css
     js: https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js
   # 文本框打字机特效
-  comment_typing: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.2/js/comment_typing.js
+  comment_typing: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@1.7.3/js/comment_typing.js
 
 
 
@@ -134,54 +134,47 @@ navbar:
     # 显示标题
     title: XAOXUU
   # logo后面的导航菜单
-  menu:
+  menu: # 下面的内容可以写在 `blog/source/_data/menu.yml` 中
     # 在桌面端显示的导航菜单
     on_desktop:
-      - name: 近期文章
-        icon: fas fa-clock
+      - name: 博客
+        icon: fas fa-rss
         url: /
-      - name: 开发
-        icon: fab fa-apple
-        url: blog/categories/dev/cocoa/
-        rel: nofollow
-        target: _self
-      - name: 项目
-        icon: fas fa-laptop-code
-        url: wiki/
-        rel: nofollow
-        target: _self
+      - name: 分类
+        icon: fas fa-folder-open
+        url: categories/
+      - name: 标签
+        icon: fas fa-tags
+        url: tags/
       - name: 归档
         icon: fas fa-archive
-        url: blog/archives/
-        rel: nofollow
-    # 手机端导航菜单（从右上角的按钮点击展开）
-    on_mobile:
-      - name: 近期文章
-        icon: fas fa-clock
-        url: /
-      - name: 文章归档
-        icon: fas fa-archive
-        url: blog/archives/
-        rel: nofollow
-      - name: 项目Wiki
-        icon: fas fa-landmark
-        url: wiki/
-      # - name: 歌单分享
-      #   icon: fas fa-compact-disc
-      #   url: music/
-      #   rel: nofollow
-      - name: 我的友链
+        url: archives/
+      - name: 友链
         icon: fas fa-link
         url: friends/
-        rel: nofollow
-      - name: 主题文档
-        icon: fas fa-book
-        url: https://xaoxuu.com/wiki/volantis/
-        rel: nofollow
-      - name: 关于小站
+      - name: 关于
         icon: fas fa-info-circle
         url: about/
-        rel: nofollow
+    # 手机端导航菜单（从右上角的按钮点击展开）
+    on_mobile:
+      - name: 博客
+        icon: fas fa-rss
+        url: /
+      - name: 分类
+        icon: fas fa-folder-open
+        url: categories/
+      - name: 标签
+        icon: fas fa-tags
+        url: tags/
+      - name: 归档
+        icon: fas fa-archive
+        url: archives/
+      - name: 友链
+        icon: fas fa-link
+        url: friends/
+      - name: 关于
+        icon: fas fa-info-circle
+        url: about/
   search: 搜索一下   # 搜索框文字
 
 
@@ -193,9 +186,9 @@ layout:
   # 文章列表（主页、自定义的列表）布局
   on_list:
     # 列表中每一篇文章的meta信息
-    meta: [title, author, category, date, wordcount, top]
+    meta: [title, author, date, category, top]
     # 列表类页面的侧边栏
-    sidebar: [blogger, category, tagcloud, repos]
+    sidebar: [blogger, category, tagcloud, qrcode]
   # 文章页面布局
   on_page:
     # 文章页面主体元素，你也可以在页面的Front-matter中设置
@@ -205,11 +198,11 @@ layout:
     # 如果tags放置在meta.header中，那么在post列表中不显示（因为卡片下方已经有了）
     meta:
       header: [title, author, category, date, top]
-      footer: [updated, tags, btns, share]
+      footer: [updated, tags, btns]
     # 文章页脚，自动在每一篇文章末尾添加
     footer: [related_posts, copyright]
     # 文章页面的侧边栏
-    sidebar: [toc]
+    sidebar: [qrcode, toc]
   # 其他的页面布局暂时等于文章列表
 
 
@@ -293,7 +286,7 @@ meta:
       color: '#1BCDFC'
 
 # 组件库配置
-widget:
+widget: #下面的内容可以写在 `blog/source/_data/widget.yml` 中
   # ---------------------------------------
   # 博主信息小部件配置
   blogger:
