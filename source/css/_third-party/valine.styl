@@ -9,7 +9,7 @@
       img
         display: inline
       .vwrap
-        border-radius: $border-radius
+        border-radius: $borderradius
         border-style: dashed
         border: 1px dashed alpha($color-text, 30%)
         trans()
@@ -32,10 +32,8 @@
 
       button
         border: none
-        padding-left: 2rem
-        padding-right: 2rem
-        border-radius: $border-radius-button
-        line-height: 1.5rem
+        padding: 8px 2rem 7px 2rem
+        border-radius: $borderradius-button
         trans()
         &:hover
           color: $color-hover
@@ -43,7 +41,7 @@
 
       blockquote
         padding: $gap
-        border-left: $border-radius-line solid $color-blockquote
+        border-left: $borderradius-line solid $color-blockquote
         trans()
         p
           text-align: left
@@ -59,8 +57,10 @@
           color: $color-hover
           text-decoration: underline
 
-      div.info a
-        font-size: $font-size-footnote
+      div.info
+        box-shadow: none
+        >a
+          font-size: $fontsize-footnote
 
       .vhead
         span

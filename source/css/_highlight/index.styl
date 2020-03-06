@@ -10,9 +10,9 @@
   overflow: auto
   display: block
   background: $color-codeblock
-  font-size: $font-size-code
-  font-family: $font-family-code
-  border-radius: $border-radius-codeblock
+  font-size: $fontsize-code
+  font-family: $fontfamily-code
+  border-radius: $borderradius-codeblock
   border: 1px solid darken($color-codeblock, 10%)
   trans()
   figcaption
@@ -64,7 +64,7 @@
         top: 0
         right: 0
         color: $color-meta
-        font-size: $font-size-footnote
+        font-size: $fontsize-footnote
         padding: 4px 8px
 
   &.html .code:before
@@ -74,22 +74,25 @@
       content: "JS"
 
   &.bash .code:before
-      content: "BASH"
+      content: "bash"
 
   &.shell .code:before
-      content: "SHELL"
+      content: "shell"
 
   &.css .code:before
-      content: "CSS"
+      content: "css"
 
   &.less .code:before
-      content: "LESS"
+      content: "less"
+
+  &.stylus .code:before
+      content: "stylus"
 
   &.swift .code:before
-      content: "SWIFT"
+      content: "Swift"
 
   &.objc .code:before
-      content: "OBJECTIVE-C"
+      content: "ObjC"
 
   &.c .code:before
       content: "C"
@@ -98,10 +101,10 @@
       content: "C++"
 
   &.java .code:before
-      content: "JAVA"
+      content: "Java"
 
   &.python .code:before
-      content: "PYTHON"
+      content: "Python"
 
   &.yaml .code:before
       content: "YAML"
@@ -111,14 +114,14 @@
 
 
   &::-webkit-scrollbar
-    height: $border-radius-line
-    width: $border-radius-line
+    height: $borderradius-line
+    width: $borderradius-line
   &::-webkit-scrollbar-track-piece
     background: transparent
   &::-webkit-scrollbar-thumb
     background: alpha($color-text, .3)
     cursor: pointer
-    border-radius: $border-radius-codeblock
+    border-radius: $borderradius-codeblock
     trans()
     &:hover
       background: alpha($color-text, .6)
@@ -137,13 +140,13 @@ $hl-amber = #FD8607
 
 pre
   // 行
-  line-height: 1.6
+  // line-height: 1.5
   .line
     color: alpha($color-text, 90%)
 
   .marked
-    background-color: alpha($color-mac-yellow, 40%)
-    padding: 3px 8px 3px 0
+    background-color: alpha(#FED542, 40%)
+    padding: 2px 8px 2px 0
     border-radius: 2px
     width: 100%
 

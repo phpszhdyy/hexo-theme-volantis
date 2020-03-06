@@ -10,28 +10,30 @@ $device-4k = 2560px
 
 
 // site layout
-$layout-width = 1080px
+$layout-width = convert(hexo-config('style.max_width')) || 1080px
 $sidebar-s = 240px
 $sidebar = 285px
 $modal-threshold = 680px
-$navbar-height = 64px
+$navbar-height = convert(hexo-config('style.navbar_height')) || 64px
 
 // gap
-$gap = 16px
-$gap-h2 = 2.5rem
-$gap-h3 = 1.5rem
-$gap-line = .5rem
+// $gap = 16px
+$gap = convert(hexo-config('style.gap')) || 16px
+$gap-h2 = convert(hexo-config('style.gap_h2')) || 2.5em
+$gap-h3 = convert(hexo-config('style.gap_h3')) || 2em
+$gap-line = convert(hexo-config('style.gap_line')) || .5rem
 $gap-card = $gap
 
 // border radius
-$border-radius = 12px
-$border-radius-codeblock = 4px
-$border-radius-line = 2px
-$border-radius-searchbar = 8px
-$border-radius-button = 2px
+$borderradius = convert(hexo-config('style.border_radius.card')) || 12px
+$borderradius-codeblock = 4px
+$borderradius-line = 2px
+$borderradius-searchbar = 8px
+$borderradius-button = 2px
 // align
-$text-align-h1 = left
-$text-align-h2 = left
-$text-align-h3 = left
+$textalign-h1 = convert(hexo-config('style.align.h1')) || left
+$textalign-h2 = convert(hexo-config('style.align.h2')) || left
+$textalign-h3 = convert(hexo-config('style.align.h3')) || left
+$textalign-h4 = convert(hexo-config('style.align.h4')) || left
 
-$text-align-body = justify
+$textalign-p = convert(hexo-config('style.align.p')) || left
